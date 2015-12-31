@@ -1,0 +1,39 @@
+
+set(EMDVIEWER_HEADERS
+    ${CMAKE_CURRENT_SOURCE_DIR}/BinaryExport.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/CentralWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/DataTypeBox.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/DimensionsPane.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/DimensionWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/EmdTypeBox.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ExportOperation.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/FileBrowser.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/FileExporter.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/FileHelper.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/FloatBox.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/GraphicsImageItem.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/GraphicsImageWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/GraphicsRegionSelectionItem.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ImageExport.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ImageScene.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ImageWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ImageWindow.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/IntBox.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/LabeledSlider.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/LogView.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainGraphicsImageWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainImageScene.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainImageView.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainImageWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MainWindow.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/Message.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/MessageModel.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ModelManager.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/PreferencesDialog.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/StatusLabel.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/StyleConfig.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ViewExport.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorkflowBrowser.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorkflowManager.h
+    PARENT_SCOPE
+)

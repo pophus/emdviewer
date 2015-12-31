@@ -1,0 +1,37 @@
+<!DOCTYPE workflow>
+<workflow group="FourierTransform" name="Basic">
+	<module id="1" group="Core" name="DataGroup">
+		<property value="Automatic" key="Source" type="QString"/>
+		<output id="2" type="Default"/>
+	</module>
+	<module id="4" group="Core" name="ImageWindow">
+		<property key="ColourMap">
+			<listener id="5" target="ColourMap"/>
+		</property>
+		<property value="true" key="ColourScalingLocked" type="bool"/>
+		<property value="" key="ColourScalingValues" type="QPointF"/>
+		<property value="MainWindow" key="Output" type="QString"/>
+		<input id="3" type="Default"/>
+	</module>
+	<module name="Histogram" group="Core" id="5">
+		<property type="QPointF" key="ScalingValues" value="0,1">
+			<listener id="4" target="ColourScalingValues"/>
+		</property>
+		<property type="Bool" key="ScalingLocked" value="true">
+			<listener id="4" target="ColourScalingLocked"/>
+		</property>
+		<input type="Default" id="3"/>
+	</module>
+	<module name="Complex" group="Core" id="3">
+		<input type="Default" id="2"/>
+		<output type="Default" id="4"/>
+		<output type="Default" id="5"/>
+	</module>
+	<module id="2" group="FourierTransform" name="FourierTransform">
+		<property key="ControlDisplayed" value="true" type="Bool"/>
+		<property key="DataShift" value="true" type="Bool"/>
+		<property key="TransformType" value="Forward" type="QString"/>
+		<output id="3" type="Default"/>
+		<input id="1" type="Default"/>
+	</module>
+</workflow>

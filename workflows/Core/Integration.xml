@@ -1,0 +1,37 @@
+<!DOCTYPE workflow>
+<workflow group="Core" name="Integration">
+	<module group="Core" id="3" name="ImageWindow">
+		<property key="ColourMap">
+			<listener id="4" target="ColourMap"/>
+			</property>
+		<property value="true" key="ColourScalingLocked" type="QString"/>
+		<property value="" key="ColourScalingValues" type="QString"/>
+		<property value="MainWindow" key="Output" type="QString"/>
+		<input id="5" type="Default"/>
+	</module>
+	<module name="Histogram" group="Core" id="4">
+		<property type="QPointF" key="ScalingValues" value="0,1">
+			<listener id="3" target="ColourScalingValues"/>
+		</property>
+		<property type="Bool" key="ScalingLocked" value="true">
+			<listener id="3" target="ColourScalingLocked"/>
+		</property>
+		<input type="Default" id="5"/>
+	</module>
+	<module name="Complex" group="Core" id="5">
+		<input type="Default" id="2"/>
+		<output type="Default" id="3"/>
+		<output type="Default" id="4"/>
+	</module>
+	<module group="Core" id="1" name="DataGroup">
+		<property value="Automatic" key="Source" type="QString"/>
+		<property key="DataGroup">
+			<listener id="2" target="DataGroup"/>
+		</property>
+		<output id="2" type="Default"/>
+	</module>
+	<module group="Core" id="2" name="Integration">
+		<output id="5" type="Default"/>
+		<input id="1" type="Default"/>
+	</module>
+</workflow>

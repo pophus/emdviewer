@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <colourmap name="Grayscale">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Violet Fire">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0" point="0.25" r="0.2470588235294118" b="0.4980392156862745"/>
+    <stop g="0" point="0.5" r="1" b="0"/>
+    <stop g="1" point="0.75" r="1" b="0"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Winter">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0" point="0.25" r="0.2470588235294118" b="0.4980392156862745"/>
+    <stop g="0.2470588235294118" point="0.5" r="0.2470588235294118" b="1"/>
+    <stop g="1" point="0.75" r="0" b="1"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Spring">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0.1215686274509804" point="0.25" r="0.4980392156862745" b="0"/>
+    <stop g="0.7490196078431373" point="0.5" r="0.2470588235294118" b="0"/>
+    <stop g="1" point="0.75" r="0.4980392156862745" b="0"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Summer">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0.09803921568627451" point="0.25" r="0.4" b="0"/>
+    <stop g="0.4980392156862745" point="0.5" r="0.7490196078431373" b="0"/>
+    <stop g="1" point="0.75" r="0" b="1"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Autumn">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0.2" point="0.25" r="0.4" b="0"/>
+    <stop g="0" point="0.5" r="1" b="0"/>
+    <stop g="0.6" point="0.75" r="1" b="0"/>
+    <stop g="1" point="1" r="1" b="0"/>
+  </colourmap>
+  <colourmap name="Bone">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0.2470588235294118" point="0.25" r="0.2" b="0.2980392156862745"/>
+    <stop g="0.5490196078431373" point="0.5" r="0.4470588235294118" b="0.6"/>
+    <stop g="0.8" point="0.75" r="0.6980392156862745" b="0.8"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Hot">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0" point="0.3300000131130219" r="1" b="0"/>
+    <stop g="1" point="0.6700000166893005" r="1" b="0"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Jet">
+    <stop g="0" point="0" r="0" b="0.4980392156862745"/>
+    <stop g="0" point="0.1000000014901161" r="0" b="1"/>
+    <stop g="1" point="0.300000011920929" r="0" b="1"/>
+    <stop g="1" point="0.5" r="0" b="0"/>
+    <stop g="1" point="0.699999988079071" r="1" b="0"/>
+    <stop g="0" point="0.800000011920929" r="1" b="0"/>
+    <stop g="0" point="0.8999999761581421" r="1" b="0"/>
+    <stop g="0" point="1" r="0.4980392156862745" b="0"/>
+  </colourmap>
+  <colourmap name="Pinkle">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0" point="0.3300000131130219" r="0.6" b="0.6"/>
+    <stop g="0.2980392156862745" point="0.6700000166893005" r="1" b="0.4980392156862745"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Greenery">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0.6980392156862745" point="0.3300000131130219" r="0" b="0"/>
+    <stop g="1" point="0.6700000166893005" r="0.2980392156862745" b="0"/>
+    <stop g="1" point="1" r="1" b="1"/>
+  </colourmap>
+  <colourmap name="Copper">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0.2" point="0.3300000131130219" r="0.4980392156862745" b="0"/>
+    <stop g="0.4980392156862745" point="0.6700000166893005" r="0.8" b="0.2"/>
+    <stop g="0.8" point="1" r="1" b="0.4980392156862745"/>
+  </colourmap>
+  <colourmap name="Jet Contours">
+    <stop g="0" point="0" r="0" b="0"/>
+    <stop g="0" point="0.07999999821186066" r="0" b="0"/>
+    <stop g="0" point="0.1000000014901161" r="0" b="1"/>
+    <stop g="0" point="0.119999997317791" r="0" b="0"/>
+    <stop g="0" point="0.2800000011920929" r="0" b="0"/>
+    <stop g="1" point="0.300000011920929" r="0" b="1"/>
+    <stop g="0" point="0.3199999928474426" r="0" b="0"/>
+    <stop g="0" point="0.4799999892711639" r="0" b="0"/>
+    <stop g="1" point="0.5" r="0" b="0"/>
+    <stop g="0" point="0.5199999809265137" r="0" b="0"/>
+    <stop g="0" point="0.6800000071525574" r="0" b="0"/>
+    <stop g="1" point="0.699999988079071" r="1" b="0"/>
+    <stop g="0" point="0.7200000286102295" r="0" b="0"/>
+    <stop g="0" point="0.8799999952316284" r="0" b="0"/>
+    <stop g="0" point="0.8999999761581421" r="1" b="0"/>
+    <stop g="0" point="0.9200000166893005" r="0" b="0"/>
+    <stop g="0" point="1" r="0" b="0"/>
+  </colourmap>
+</data>

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/error.png</file>
+        <file>icons/warning.png</file>
+        <file>icons/debug.png</file>
+        <file>icons/notification.png</file>
+        <file>icons/uparrow.png</file>
+        <file>icons/downarrow.png</file>
+        <file>colourmaps.xml</file>
+        <file>icons/canadian_flag.jpg</file>
+        <file>icons/MBlogo04_textured_04_cropped_small.png</file>
+        <file>icons/window_icon.png</file>
+        <file>icons/close.png</file>
+        <file>icons/popout.png</file>
+    </qresource>
+</RCC>

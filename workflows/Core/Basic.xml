@@ -1,0 +1,28 @@
+<!DOCTYPE workflow>
+<workflow name="Basic" group="Core">
+	<module name="DataGroup" group="Core" id="1">
+		<property type="QString" key="Source" value="Automatic"/>
+		<output type="Default" id="2"/>
+	</module>
+	<module name="ImageWindow" group="Core" id="3">
+		<property key="ColourMap">
+			<listener id="4" target="ColourMap"/>
+		</property>
+		<property type="QString" key="Output" value="MainWindow"/>
+		<input type="Default" id="2"/>
+	</module>
+	<module name="Histogram" group="Core" id="4">
+		<property type="QPointF" key="ScalingValues" value="0,1">
+			<listener id="3" target="ColourScalingValues"/>
+		</property>
+		<property type="Bool" key="ScalingLocked" vale="true">
+			<listener id="3" target="ColourScalingLocked"/>
+		</property>
+		<input type="Default" id="2"/>
+	</module>
+	<module name="Complex" group="Core" id="2">
+		<input type="Default" id="1"/>
+		<output type="Default" id="3"/>
+		<output type="Default" id="4"/>
+	</module>
+</workflow>

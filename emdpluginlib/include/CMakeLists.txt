@@ -1,0 +1,31 @@
+
+set(EMDPLUGINLIB_HEADERS 
+    ${CMAKE_CURRENT_SOURCE_DIR}/BinaryOutputModule.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ColourManager.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ColourMap.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ColourMapImpl.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ColourMapSelector.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ComplexModule.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/DataGroupModule.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/EmdPluginLib.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/FrameSet.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/GradientDialog.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/Histogram.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/HistogramModule.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/HistogramScene.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/HistogramView.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ImageWindowModule.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ModuleSource.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/NumberBox.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/NumberRangeWidget.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/Plugin.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/PointCloud.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ProcessingContext.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/ProcessingContextImpl.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorkContext.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorkerThread.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/Workflow.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorkflowModule.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/WorkflowSource.h
+    PARENT_SCOPE
+)

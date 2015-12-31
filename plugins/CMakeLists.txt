@@ -1,0 +1,21 @@
+
+MACRO(SUBDIRLIST result curdir)
+    FILE(GLOB children RELATIVE ${curdir} ${curdir}/*)
+    SET(dirlist "")
+    FOREACH(child ${children})
+        IF(IS_DIRECTORY ${curdir}/${child})
+            LIST(APPEND dirlist ${child})
+        ENDIF()
+    ENDFOREACH()
+    SET(${result} ${dirlist})
+ENDMACRO()
+
+SUBDIRLIST(SUBDIRS ${CMAKE_CURRENT_LIST_DIR})
+
+FOREACH(subdir ${SUBDIRS})
+    if (EXISTS "${CMAKE_CURRENT_LIST_DIR}/${subdir}/CMakeLists.txt")
+	    add_subdirectory(${subdir})
+	else()
+	    message(WARNING "Plugin dir ${subdir} has no CMakeLists.txt")
+	endif()
+ENDFOREACH()
