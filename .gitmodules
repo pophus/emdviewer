@@ -1,0 +1,3 @@
+[submodule "emdlib"]
+	path = emdlib
+	url = https://github.com/pophus/emdlib.git
