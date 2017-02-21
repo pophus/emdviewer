@@ -344,7 +344,7 @@ void MainWindow::setUpUI()
         this, SLOT(setMessageLogExpanded(bool)));
 
     connect(messageLog, SIGNAL(messageLogged()),
-        m_messageView, SLOT(safeScrollToBottom()));
+        m_messageView, SLOT(scrollToBottom()));
 
     m_statusBarDock = new QDockWidget();
     QWidget *dummyTitleBar = new QWidget();

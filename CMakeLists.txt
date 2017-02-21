@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1.0)
+﻿cmake_minimum_required(VERSION 3.1.0)
 
 project(emdviewer)
 
@@ -25,7 +25,7 @@ set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_BINARY_DIR}/install")
 
 set(emdviewer_VERSION_MAJOR "0")
 set(emdviewer_VERSION_MINOR "4")
-set(emdviewer_VERSION_PATCH "0")
+set(emdviewer_VERSION_PATCH "2")
 
 set(emdviewer_VERSION "${emdviewer_VERSION_MAJOR}.${emdviewer_VERSION_MINOR}.${emdviewer_VERSION_PATCH}")
 

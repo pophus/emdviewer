@@ -20,6 +20,7 @@
 
 #include <QApplication>
 #include <QFile>
+#include <QMap>
 #include <QTextStream>
 #include <QTime>
  
@@ -38,22 +39,27 @@ QTextStream *logStream;
 emd::MessageModel *messageLog;
 bool logFileOpened;
 
-void setUpLog()
-{
-	logFile = new QFile(QDir::currentPath() + "//log.txt");
-
-	if(logFile->exists())
-		logFile->remove();
-	logFileOpened = logFile->open(QIODevice::ReadWrite | QIODevice::Text);
-
-	logStream = new QTextStream();
-	logStream->setDevice(logFile);
-
-	messageLog = new emd::MessageModel();
-}
-
 void LogHandler(QtMsgType type, const QMessageLogContext &, const QString &msg) 
 {
+    // Avoid infinite loop scenarios where a log message itself
+    // triggers another log message. One scenario where this can
+    // happen is an accessibility warning given by QWindow when
+    // a message is posted to the LogView. The warning itself is
+    // then posted, which triggers another warning, and so on.
+    // The minimum required spacing of identical log messages is
+    // defined by kMsgInterval below.
+    static QMap<QString, QTime> messageMap;
+    static const int kMsgInterval = 1000;  // In milliseconds
+    QTime lastTime = messageMap[msg];
+    QTime currentTime = QTime::currentTime();
+    if (lastTime.isValid() 
+        && lastTime.msecsTo(currentTime) < kMsgInterval)
+    {
+        // Message was seen too recently.
+        return;
+    }
+    messageMap[msg] = currentTime;
+
 	switch (type) 
 	{
 	case QtDebugMsg:
@@ -80,13 +86,38 @@ void LogHandler(QtMsgType type, const QMessageLogContext &, const QString &msg)
 		logStream->flush();
 }
 
+void setUpLog()
+{
+	logFile = new QFile(QDir::currentPath() + "//log.txt");
+
+	if(logFile->exists())
+		logFile->remove();
+	logFileOpened = logFile->open(QIODevice::ReadWrite | QIODevice::Text);
+
+	logStream = new QTextStream();
+	logStream->setDevice(logFile);
+
+	messageLog = new emd::MessageModel();
+    
+	qInstallMessageHandler(&LogHandler);
+}
+
+void tearDownLog()
+{
+    qInstallMessageHandler(nullptr);
+
+	delete messageLog;
+	delete logFile;
+	delete logStream;
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication::setOrganizationName(kCompanyName);
     QCoreApplication::setApplicationName(kProgramName);
 
 	setUpLog();
-	qInstallMessageHandler(&LogHandler);
+
     QApplication app(argc, argv);
     
     QApplication::setStyle(QStyleFactory::create("Fusion"));
@@ -237,9 +268,8 @@ int main(int argc, char *argv[])
 
     int ret = app.exec();
 
-	//delete messageLog;
-	//delete logFile;
-	//delete logStream;
+    // Clean up the logger to avoid crashes on exit.
+    tearDownLog();
 
 	return ret;
  }

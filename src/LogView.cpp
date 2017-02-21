@@ -20,8 +20,6 @@
 
 #include "LogView.h"
 
-#include <qtimer.h>
-
 namespace emd
 {
 
@@ -40,18 +38,6 @@ void LogView::enterEvent(QEvent *)
 void LogView::leaveEvent(QEvent *)
 {
     emit(hoverChanged(false));
-}
-
-void LogView::safeScrollToBottom()
-{
-    QTime currentTime = QTime::currentTime();
-
-    // Only scroll to bottom if enough time has passed.
-    if(m_updateTime.msecsTo(currentTime) > 1000)
-    {
-        m_updateTime = currentTime;
-        QTimer::singleShot(1000, this, SLOT(scrollToBottom()));
-    }
 }
 
 } // namespace emd

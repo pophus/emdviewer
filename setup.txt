@@ -1,0 +1,69 @@
+Building From Source
+--------------------
+
+Requirements:
+
+CMake - Tested with versions 3.2 and 3.8, but any version >= 3.2 should work.
+
+HDF5 - Tested with version 1.8.12. Build errors have been seen with some newer 
+versions, so stick with 1.8.12 if you don't want to fix anything. Make sure to 
+get the 64-bit version.
+
+Qt - Tested with version 5.2.0. Newer versions should work, but try at your own 
+risk. Make sure to get the 64-bit OpenGL version.
+
+[Windows Only] Visual Studio 2012 - Problems have been seen with newer versions
+(e.g. VS2015), so it might not work out of the box. If you want to use a newer
+version then please fix the problems and update this guide.
+
+[OSX Only] Xcode - The latest version should work.
+
+Windows:
+
+1. Create a build folder somewhere, e.g. in the root level of your emdViewer
+repository.
+
+2. Open the Visual Studio command prompt, called something like "Developer Command
+Prompt for VS2012", and navigate to your build folder. For example:
+
+    cd C:\Code\emdViewer\build
+
+3. Set environment variables for your HDF5 and Qt install locations. This helps
+cmake find the required files. For example:
+
+    set HDF5_ROOT_DIR_HINT=C:\Program Files\HDF5\1.8.12\
+    set QT_DIR=C:\Qt\5.2.0-64\5.2.0\msvc2012_64_opengl\
+
+The specified folders should be the ones containing "bin", "include", etc.
+
+4. Run the cmake command with your emdviewer repository root as the target location.
+For example, if you put your build folder in the repo root:
+
+    cmake .. -G"Visual Studio 11 2012 Win64"
+
+Note: make sure to run cmake from inside your build folder!
+
+This command will generate the Visual Studio project files to build the project.
+If you get an error that cmake can't be found, make sure your CMake install directory
+is in your Path variable (check with "set Path"). If it's not there you can either
+add it or just specify the full path to cmake.exe, e.g.:
+
+    C:\Program Files\CMake\bin\cmake .. -G"Visual Studio 11 2012 Win64"
+
+5. Open the generated solution file in Visual Studio (emdviewer.sln).
+
+6. Right-click the emdViewer project in the solution explorer and select "Set as
+StartUp Project".
+
+7. Use the run button to build and run the app. The selector at the top is used to
+switch between debug and release builds.
+
+To create the installer, build the INSTALL and PACKAGE targets.
+
+
+OSX:
+
+OSX has not been tested with the latest code, but the required steps are very similar
+to Windows. Make a build folder, set directories, run cmake (using the Xcode generator),
+and build the generated project file in Xcode. If you get it to work please update the
+build instructions and contribute any required fixes.

@@ -22,7 +22,6 @@
 #define EMD_LOGVIEW_H
 
 #include <QListView>
-#include <QTime>
 
 namespace emd
 {
@@ -37,14 +36,8 @@ public:
     virtual void enterEvent(QEvent *e);
     virtual void leaveEvent(QEvent *e);
 
-public slots:
-    void safeScrollToBottom();
-
 signals:
     void hoverChanged(bool);
-
-private:
-    QTime m_updateTime;
 };
 
 } // namespace emd
